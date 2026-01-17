@@ -1,0 +1,29 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+hytale:
+  default_port: 5520
+  timeout: 10s
+  max_connections: 100
+  user_agent: "HytaleStatusDaemon/1.0"
+
+cache:
+  ttl: 30s
+  max_entries: 1000
+  cleanup_interval: 60s
+
+logging:
+  level: "info"
+  format: "json"
+  output: "stdout"
+
+security:
+  rate_limit: 100
+  trusted_proxies: []
+  cors_origins: ["*"]
+
+monitoring:
+  enable_metrics: true
+  metrics_port: 9090
+  health_check: true
